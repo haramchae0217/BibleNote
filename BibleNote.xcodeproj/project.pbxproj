@@ -9,22 +9,34 @@
 /* Begin PBXBuildFile section */
 		83399ACA2B5F479800CA8610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399AC92B5F479800CA8610 /* AppDelegate.swift */; };
 		83399ACC2B5F479800CA8610 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399ACB2B5F479800CA8610 /* SceneDelegate.swift */; };
-		83399ACE2B5F479800CA8610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399ACD2B5F479800CA8610 /* ViewController.swift */; };
+		83399ACE2B5F479800CA8610 /* BibleNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399ACD2B5F479800CA8610 /* BibleNoteViewController.swift */; };
 		83399AD12B5F479800CA8610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83399ACF2B5F479800CA8610 /* Main.storyboard */; };
 		83399AD32B5F479A00CA8610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83399AD22B5F479A00CA8610 /* Assets.xcassets */; };
 		83399AD62B5F479A00CA8610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83399AD42B5F479A00CA8610 /* LaunchScreen.storyboard */; };
 		83399ADF2B5F4AD600CA8610 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 83399ADE2B5F4AD600CA8610 /* FSCalendar */; };
+		83399AE32B5F5BDC00CA8610 /* BibleNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399AE22B5F5BDC00CA8610 /* BibleNoteTableViewCell.swift */; };
+		83399AE72B5F5FA500CA8610 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 83399AE62B5F5FA500CA8610 /* Realm */; };
+		83399AE92B5F5FA500CA8610 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 83399AE82B5F5FA500CA8610 /* RealmSwift */; };
+		83399AEB2B5F66B300CA8610 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399AEA2B5F66B300CA8610 /* Note.swift */; };
+		83399AED2B5F67C400CA8610 /* MyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399AEC2B5F67C400CA8610 /* MyDB.swift */; };
+		83399AEF2B5F731100CA8610 /* DateFormatter++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399AEE2B5F731100CA8610 /* DateFormatter++Extension.swift */; };
+		83399AF52B5F73D900CA8610 /* UIAlertController++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83399AF42B5F73D900CA8610 /* UIAlertController++Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		83399AC62B5F479800CA8610 /* BibleNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83399AC92B5F479800CA8610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83399ACB2B5F479800CA8610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		83399ACD2B5F479800CA8610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83399ACD2B5F479800CA8610 /* BibleNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleNoteViewController.swift; sourceTree = "<group>"; };
 		83399AD02B5F479800CA8610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83399AD22B5F479A00CA8610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83399AD52B5F479A00CA8610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83399AD72B5F479A00CA8610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83399AE22B5F5BDC00CA8610 /* BibleNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleNoteTableViewCell.swift; sourceTree = "<group>"; };
+		83399AEA2B5F66B300CA8610 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		83399AEC2B5F67C400CA8610 /* MyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDB.swift; sourceTree = "<group>"; };
+		83399AEE2B5F731100CA8610 /* DateFormatter++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter++Extension.swift"; sourceTree = "<group>"; };
+		83399AF42B5F73D900CA8610 /* UIAlertController++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController++Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83399AE92B5F5FA500CA8610 /* RealmSwift in Frameworks */,
+				83399AE72B5F5FA500CA8610 /* Realm in Frameworks */,
 				83399ADF2B5F4AD600CA8610 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,15 +72,60 @@
 		83399AC82B5F479800CA8610 /* BibleNote */ = {
 			isa = PBXGroup;
 			children = (
-				83399AC92B5F479800CA8610 /* AppDelegate.swift */,
-				83399ACB2B5F479800CA8610 /* SceneDelegate.swift */,
-				83399ACD2B5F479800CA8610 /* ViewController.swift */,
-				83399ACF2B5F479800CA8610 /* Main.storyboard */,
-				83399AD22B5F479A00CA8610 /* Assets.xcassets */,
-				83399AD42B5F479A00CA8610 /* LaunchScreen.storyboard */,
+				83399AE02B5F58E400CA8610 /* Source */,
+				83399AE12B5F58EE00CA8610 /* Resource */,
 				83399AD72B5F479A00CA8610 /* Info.plist */,
 			);
 			path = BibleNote;
+			sourceTree = "<group>";
+		};
+		83399AE02B5F58E400CA8610 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				83399AC92B5F479800CA8610 /* AppDelegate.swift */,
+				83399ACB2B5F479800CA8610 /* SceneDelegate.swift */,
+				83399AF02B5F731B00CA8610 /* BibleNote */,
+				83399AF22B5F733600CA8610 /* Model */,
+				83399AF32B5F733E00CA8610 /* Extension */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		83399AE12B5F58EE00CA8610 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				83399ACF2B5F479800CA8610 /* Main.storyboard */,
+				83399AD22B5F479A00CA8610 /* Assets.xcassets */,
+				83399AD42B5F479A00CA8610 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		83399AF02B5F731B00CA8610 /* BibleNote */ = {
+			isa = PBXGroup;
+			children = (
+				83399ACD2B5F479800CA8610 /* BibleNoteViewController.swift */,
+				83399AE22B5F5BDC00CA8610 /* BibleNoteTableViewCell.swift */,
+			);
+			path = BibleNote;
+			sourceTree = "<group>";
+		};
+		83399AF22B5F733600CA8610 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83399AEC2B5F67C400CA8610 /* MyDB.swift */,
+				83399AEA2B5F66B300CA8610 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83399AF32B5F733E00CA8610 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				83399AEE2B5F731100CA8610 /* DateFormatter++Extension.swift */,
+				83399AF42B5F73D900CA8610 /* UIAlertController++Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +146,8 @@
 			name = BibleNote;
 			packageProductDependencies = (
 				83399ADE2B5F4AD600CA8610 /* FSCalendar */,
+				83399AE62B5F5FA500CA8610 /* Realm */,
+				83399AE82B5F5FA500CA8610 /* RealmSwift */,
 			);
 			productName = BibleNote;
 			productReference = 83399AC62B5F479800CA8610 /* BibleNote.app */;
@@ -118,6 +179,7 @@
 			mainGroup = 83399ABD2B5F479800CA8610;
 			packageReferences = (
 				83399ADD2B5F4AD600CA8610 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				83399AE52B5F5FA500CA8610 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 83399AC72B5F479800CA8610 /* Products */;
 			projectDirPath = "";
@@ -146,9 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83399ACE2B5F479800CA8610 /* ViewController.swift in Sources */,
+				83399AEB2B5F66B300CA8610 /* Note.swift in Sources */,
+				83399ACE2B5F479800CA8610 /* BibleNoteViewController.swift in Sources */,
+				83399AF52B5F73D900CA8610 /* UIAlertController++Extension.swift in Sources */,
 				83399ACA2B5F479800CA8610 /* AppDelegate.swift in Sources */,
+				83399AE32B5F5BDC00CA8610 /* BibleNoteTableViewCell.swift in Sources */,
 				83399ACC2B5F479800CA8610 /* SceneDelegate.swift in Sources */,
+				83399AED2B5F67C400CA8610 /* MyDB.swift in Sources */,
+				83399AEF2B5F731100CA8610 /* DateFormatter++Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +448,14 @@
 				minimumVersion = 2.8.4;
 			};
 		};
+		83399AE52B5F5FA500CA8610 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -388,6 +463,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 83399ADD2B5F4AD600CA8610 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		83399AE62B5F5FA500CA8610 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83399AE52B5F5FA500CA8610 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		83399AE82B5F5FA500CA8610 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83399AE52B5F5FA500CA8610 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
