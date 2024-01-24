@@ -13,6 +13,7 @@ class BibleNoteViewController: UIViewController {
     var filteredList: [Note] = []
 
     //StoryboardID : BibleNoteVC
+    
     @IBOutlet weak var bibleNoteCalendarView: FSCalendar!
     @IBOutlet weak var bibleNoteDateLabel: UILabel!
     @IBOutlet weak var bibleNoteTableView: UITableView!
@@ -30,6 +31,8 @@ class BibleNoteViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        print(MyDB.noteList)
     }
     
     func configureNavigationController() {
@@ -79,6 +82,12 @@ class BibleNoteViewController: UIViewController {
     func strToDate(str: String) -> Date {
         return DateFormatter.customDateFormatter.strToDate(str: str)
     }
+    
+    @IBAction func addNoteButton(_ sender: UIBarButtonItem) {
+        guard let addVC = self.storyboard?.instantiateViewController(identifier: "AddBibleNoteVC") as? AddBibleNoteViewController else { return }
+        self.navigationController?.pushViewController(addVC, animated: true)
+    }
+    
 
 }
 
