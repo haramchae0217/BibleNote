@@ -12,5 +12,6 @@ class BibleNoteTableViewCell: UITableViewCell {
     static let identifier = "noteCell"
 
     @IBOutlet weak var BibleNoteTitleLabel: UILabel!
+    @IBOutlet weak var BibleNoteVerseLabel: UILabel!
     
 }

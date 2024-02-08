@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddBibleNoteViewController: UIViewController {
+    
+    enum noteViewType {
+        case add
+        case edit
+    }
     
     // //StoryboardID : AddBibleNoteVC
     @IBOutlet weak var titleTextField: UITextField!
@@ -16,7 +22,11 @@ class AddBibleNoteViewController: UIViewController {
     @IBOutlet weak var bibleMemoTextView: UITextView!
     @IBOutlet weak var wordCountLabel: UILabel!
     
+    let localRealm = try! Realm()
+    
     var textCount: Int = 0
+    var editNote: NoteDB?
+    var viewType: noteViewType = .add
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +54,11 @@ class AddBibleNoteViewController: UIViewController {
     }
     
     func configureNavigationController() {
-        title = "말씀노트 추가"
+        if viewType == .edit {
+            title = "말씀노트 수정"
+        } else {
+            title = "말씀노트 추가"
+        }
     }
     
     func configureTextView() {
@@ -59,6 +73,27 @@ class AddBibleNoteViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightBarButton
     }
     
+    func addNote(note: NoteDB) {
+        try! localRealm.write {
+            localRealm.add(note)
+        }
+    }
+    
+    func editNote(oldNote: NoteDB, newNote: NoteDB) {
+        try! localRealm.write {
+            localRealm.create(
+                NoteDB.self,
+                value: [
+                    "_id": oldNote._id,
+                    "title": oldNote.title,
+                    "mainVerse": oldNote.mainVerse,
+                    "note": oldNote.note,
+                    "date": oldNote.date
+                ],
+                update: .modified)
+        }
+    }
+
     // 노티피케이션을 추가하는 메서드
     func addKeyboardNotifications() {
         // 키보드가 나타날 때 앱에게 알리는 메서드 추가
@@ -100,10 +135,10 @@ class AddBibleNoteViewController: UIViewController {
     @objc func addMemoButton() {
         let title = titleTextField.text!
         let bibleVerse = bibleVerseTextField.text!
-        let date = memoDatePicker.date
+        var date = memoDatePicker.date
         let memo = bibleMemoTextView.text!
-        let strDate = DateFormatter.customDateFormatter.dateToString(date: date)
-        let dateStr = DateFormatter.customDateFormatter.strToDate(str: strDate)
+    
+        date = DateFormatter.customDateFormatter.strToDate(str: DateFormatter.customDateFormatter.dateToString(date: date))
         
         if textCount > 500 {
             UIAlertController.warningAlert(title: "🚫", message: "500자 이내로 작성해주세요.", viewController: self)
@@ -115,9 +150,15 @@ class AddBibleNoteViewController: UIViewController {
             return
         }
         
-        let newNote = Note(title: title, mainVerse: bibleVerse, note: memo, date: dateStr)
+        let note = NoteDB(title: title, mainVerse: bibleVerse, note: memo, date: date)
         
-        MyDB.noteList.append(newNote)
+        if viewType == .add {
+            addNote(note: note)
+        } else {
+            if let oldNote = editNote {
+                editNote(oldNote: oldNote, newNote: note)
+            }
+        }
         
         self.navigationController?.popViewController(animated: true)
     }

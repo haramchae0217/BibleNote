@@ -33,29 +33,41 @@
                                 <rect key="frame" x="0.0" y="392.33333333333326" width="393" height="376.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" id="Ult-H1-PEk" customClass="BibleNoteTableViewCell" customModule="BibleNote" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="44.333332061767578"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" rowHeight="76" id="Ult-H1-PEk" customClass="BibleNoteTableViewCell" customModule="BibleNote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ult-H1-PEk" id="spM-Me-oMr">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsI-l9-jov">
-                                                    <rect key="frame" x="20" y="9.9999999999999982" width="353" height="24.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1n2-uG-4Aa">
+                                                    <rect key="frame" x="10" y="10" width="373" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsI-l9-jov">
+                                                            <rect key="frame" x="0.0" y="0.0" width="373" height="26.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8k-8h-xch">
+                                                            <rect key="frame" x="0.0" y="36.666666666666664" width="373" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="IsI-l9-jov" secondAttribute="bottom" constant="10" id="8BW-O1-Vjf"/>
-                                                <constraint firstItem="IsI-l9-jov" firstAttribute="leading" secondItem="spM-Me-oMr" secondAttribute="leading" constant="20" id="cjo-fm-5d9"/>
-                                                <constraint firstItem="IsI-l9-jov" firstAttribute="top" secondItem="spM-Me-oMr" secondAttribute="top" constant="10" id="jTl-gk-8dt"/>
-                                                <constraint firstAttribute="trailing" secondItem="IsI-l9-jov" secondAttribute="trailing" constant="20" id="zGM-dv-xLz"/>
+                                                <constraint firstAttribute="bottom" secondItem="1n2-uG-4Aa" secondAttribute="bottom" constant="10" id="5C7-KB-U19"/>
+                                                <constraint firstItem="1n2-uG-4Aa" firstAttribute="leading" secondItem="spM-Me-oMr" secondAttribute="leading" constant="10" id="JfY-ET-8ob"/>
+                                                <constraint firstItem="1n2-uG-4Aa" firstAttribute="top" secondItem="spM-Me-oMr" secondAttribute="top" constant="10" id="swt-PL-22r"/>
+                                                <constraint firstAttribute="trailing" secondItem="1n2-uG-4Aa" secondAttribute="trailing" constant="10" id="yHS-vA-eiX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="BibleNoteTitleLabel" destination="IsI-l9-jov" id="wLs-pf-XYU"/>
+                                            <outlet property="BibleNoteVerseLabel" destination="D8k-8h-xch" id="xDM-Ns-av4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

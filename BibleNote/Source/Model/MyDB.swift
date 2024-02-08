@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct MyDB {
-    static var noteList: [Note] = []
-}
+//struct MyDB {
+//    static var noteList: [Note] = []
+//}
